@@ -36,14 +36,14 @@ export class FormComponent implements OnInit {
     this.clienteService.create(this.cliente).subscribe(
       cliente => {
         this.router.navigate(['/clientes']);
-        swal('Nuevo cliente', `Cliente ${cliente.name} creado con éxito`, 'success');
+        swal('Nuevo cliente', `El cliente ${cliente.name} ha sido creado con éxito`, 'success');
       });
   }
 
   update(): void {
     this.clienteService.update(this.cliente).subscribe(cliente => {
       this.router.navigate(['/clientes']);
-      swal('Cliente Actualizado', `Cliente ${cliente.name} actualizado con éxito`, 'success');
+      swal('Cliente Actualizado', `El cliente  ${cliente.name} ha sido actualizado con éxito`, 'success');
     });
   }
 
