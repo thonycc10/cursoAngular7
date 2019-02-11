@@ -13,10 +13,10 @@
           <div class="input-group">
             <div class="custom-file">
               <input (change)="selectFoto($event)" type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
-              <label class="custom-file-label" for="inputGroupFile04">Subir Foto</label>
+              <label class="custom-file-label" for="inputGroupFile04">Cargar Foto</label>
             </div>
             <div class="input-group-append">
-              <button (click)="subirFoto()" class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
+              <button (click)="subirFoto()" [disabled]="!fotoSeleccionada" class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Subir</button>
             </div>
           </div>
         </div>
